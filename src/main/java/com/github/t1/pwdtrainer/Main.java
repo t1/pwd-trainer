@@ -5,6 +5,8 @@ import java.security.*;
 import java.util.Arrays;
 
 public class Main {
+    private static final String BELL = "\07";
+
     public static void main(String[] args) {
         Console console = System.console();
         if (console == null) {
@@ -32,7 +34,7 @@ public class Main {
             if (Arrays.equals(next, digest)) {
                 System.out.println("matched.    took " + t + "ms");
             } else {
-                System.out.println("\07WRONG!!!    took " + t + "ms");
+                System.out.println(BELL + "WRONG!!!    took " + t + "ms");
             }
         }
         System.out.println("\nThanks!");
