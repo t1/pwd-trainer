@@ -19,7 +19,7 @@ public class Main {
     private final Console console;
     private final byte[] digest;
 
-    public Main(Console console) {
+    private Main(Console console) {
         this.console = console;
         this.digest = read("please initialize your password: ");
     }
